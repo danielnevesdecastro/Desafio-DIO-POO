@@ -1,3 +1,4 @@
+import br.com.dio.desafio.dominio.Conteudo;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Mentoria;
 
@@ -13,11 +14,13 @@ public class Main {
         curso2.setTitulo("Spring");
         curso2.setDescricao("framework Spring para microserviços");
         curso2.setCargaHoraria(4);
+        Conteudo curso3 = new Curso(); // polimorfismo, intancia especifica a partir de uma classe abstrata(genérica)
 
         Mentoria mentoria1 = new Mentoria();
         mentoria1.setTitulo("Carreira em Java");
         mentoria1.setDescricao("guiando no roadmap da carreira em java");
         mentoria1.setData(LocalDate.now());//.now pega a data de criação
+
 
         System.out.println(curso1+"\n"+curso2);
         System.out.println(mentoria1);
