@@ -1,5 +1,7 @@
 package br.com.dio.desafio.dominio;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,11 +18,11 @@ public class Dev {
     }
 
     public void progredir() {
-        Optional<Conteudo> conteudo= this.conteudosInscritos.stream().findFirst(); // Optional para resolver retorno Null
-        if (conteudo.isPresent()){
+        Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst(); // Optional para resolver retorno Null
+        if (conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
-        }else{
+        } else {
             System.err.println("Você não está matriculado em nenhum conteúdo!");//err imprimir mensagem de erro
         }
     }
